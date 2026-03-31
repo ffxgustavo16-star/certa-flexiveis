@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Marca</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #111;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    /* SEÇÕES */
+    .section {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .image {
+      width: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* TEXTO */
+    .text {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px;
+    }
+
+    .text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* HOVER OVERLAY */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      color: white;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .image:hover .overlay {
+      opacity: 1;
+    }
+
+    /* ALTERNAR LADOS */
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .image, .text {
+        width: 100%;
+      }
+
+      .overlay {
+        opacity: 1;
+        position: relative;
+        background: #111;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    MINHA MARCA
+  </div>
+
+  <!-- COLEÇÃO 1 -->
+  <section class="section">
+    <div class="image">
+      <img src="https://picsum.photos/800/1000" />
+
+      <div class="overlay">
+        Essa peça nasceu da ideia de transformar o comum em algo único.
+      </div>
+    </div>
+
+    <div class="text">
+      <h2>Coleção 01</h2>
+      <p>
+        Uma coleção baseada em formas orgânicas e textura emborrachada,
+        trazendo resistência e identidade.
+      </p>
+    </div>
+  </section>
+
+  <!-- COLEÇÃO 2 -->
+  <section class="section reverse">
+    <div class="image">
+      <img src="https://picsum.photos/801/1000" />
+
+      <div class="overlay">
+        Inspirada no contraste entre força e flexibilidade.
+      </div>
+    </div>
+
+    <div class="text">
+      <h2>Coleção 02</h2>
+      <p>
+        Explora novas possibilidades de material e design,
+        criando peças com presença marcante.
+      </p>
+    </div>
+  </section>
+
+  <!-- COLEÇÃO 3 -->
+  <section class="section">
+    <div class="image">
+      <img src="https://picsum.photos/802/1000" />
+
+      <div class="overlay">
+        Cada detalhe carrega um propósito funcional e estético.
+      </div>
+    </div>
+
+    <div class="text">
+      <h2>Coleção 03</h2>
+      <p>
+        Minimalismo com identidade forte, pensado para durar.
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
